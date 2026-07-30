@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #101828;
+  background: #f6f7f9;
+}
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+article,
+.panel {
+  background: white;
+  border: 1px solid #d9dee8;
+  border-radius: 8px;
+  padding: 28px;
+}
+
+a {
+  color: #175cd3;
+}
+
+pre {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.muted {
+  color: #667085;
+}

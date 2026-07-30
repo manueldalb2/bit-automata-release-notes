@@ -8,7 +8,7 @@ type Props = {
 };
 
 async function getMarkdown(versionParam: string) {
-  const version = versionParam.replace(/\\.md$/, "");
+  const version = versionParam.replace(/\.md$/, "");
   const pathname = `releases/${version}.md`;
 
   const result = await list({ prefix: pathname, limit: 1 });
@@ -18,7 +18,7 @@ async function getMarkdown(versionParam: string) {
     return null;
   }
 
-  const response = await fetch(blob.url, { cache: "no-store" });
+  const response = await fetch(blob.downloadUrl, { cache: "no-store" });
   if (!response.ok) {
     return null;
   }

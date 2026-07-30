@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
   const version = String(form.get("version") || "").trim();
   const file = form.get("file");
 
-  if (!/^\\d+\\.\\d+\\.\\d+[-\\w.]*$/.test(version)) {
+  if (!/^\d+\.\d+\.\d+[-\w.]*$/.test(version)) {
     return NextResponse.json({ ok: false, error: "Invalid version" }, { status: 400 });
   }
 

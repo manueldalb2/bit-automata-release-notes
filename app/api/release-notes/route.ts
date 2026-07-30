@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     const pathname = `releases/${version}.md`;
 
     const blob = await put(pathname, markdown, {
-      access: "public",
+      access: "private",
       addRandomSuffix: false,
       allowOverwrite: true,
       contentType: "text/markdown; charset=utf-8"
